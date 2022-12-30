@@ -1,0 +1,93 @@
+.taskComponent {
+  width: 46rem;
+  margin-top: 1.5rem;
+  display: flex;
+  padding: 1rem;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.taskComponent button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  transition: color 0.1s;
+}
+
+.taskComponent button:hover {
+  color: var(--red-300);
+}
+
+.checkbox {
+  display: none;
+
+}
+
+.checkmark {
+  content: '';
+  width: 1.5rem;
+  cursor: pointer;
+  height: 1.5rem;
+  border-radius: 99px;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid var(--blue-300);
+  transition: background-color 0.1s, opacity 0.1s;
+}
+
+.checkmark:after {
+  content: "";
+  display: none;
+  position: relative;
+  left: 0.5rem;
+  width: 5px;
+  height: 10px;
+  border: solid var(--gray-100);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox:checked~.checkmark:after {
+  display: inline-block;
+}
+
+.checkmark:hover {
+  background: var(--blue-500);
+  opacity: 0.5;
+}
+
+.checkbox:checked+.checkmark {
+  border: 0;
+  background: var(--purple-800);
+
+}
+
+.checkbox:checked+.checkmark:hover {
+  background: var(--purple-600);
+  opacity: 1;
+}
+
+.uncheckedText {
+
+  color: var(--gray-100);
+  width: 39.5rem;
+  height: 2.5rem;
+}
+
+.checkedText {
+
+  color: var(--gray-300);
+  text-decoration-line: line-through;
+  height: 2.5rem;
+  width: 39.5rem;
+}

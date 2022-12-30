@@ -1,0 +1,16 @@
+.emptyTask {
+  display: flex;
+  margin-top: 1.5rem;
+  padding: 4rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 46rem;
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+  color: var(--gray-300);
+}
+
+.emptyTask img {
+  margin-bottom: 1rem;
+}
